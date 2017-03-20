@@ -45,7 +45,7 @@ parameters:
   linux:
     network:
       interface:
-        ens4:
+        eno1:
           enabled: true
           type: eth
           proto: static
