@@ -3,9 +3,9 @@
 classes:
 - system.linux.system.single
 - system.openssh.server.team.tcpcloud
-- system.openssh.server.team.mcp_qa
 - system.openssh.server.team.lab
 - cluster.emdb_kube.infra
+- cluster.emdb_kube._team
 - cluster.emdb_kube.kubernetes
 parameters: 
   _param:
