@@ -59,3 +59,11 @@ parameters:
             salt_master_host: ${_param:reclass_config_master}
             linux_system_codename: xenial
             single_address: ${_param:kubernetes_compute_node02_single_address}
+        gateway_node01:
+          name: gtw01
+          domain: ${_param:cluster_domain}
+          classes:
+          - cluster.${_param:cluster_name}.kubernetes.gateway
+          params:
+            salt_master_host: 185.22.99.7
+            linux_system_codename: jessie
