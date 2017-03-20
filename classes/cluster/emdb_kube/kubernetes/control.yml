@@ -9,7 +9,7 @@ classes:
 - cluster.emdb_kube
 parameters:
   _param:
-    keepalived_vip_interface: ens4
+    keepalived_vip_interface: eno1
     keepalived_vip_virtual_router_id: 60
   etcd:
     server:
