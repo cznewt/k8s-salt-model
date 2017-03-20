@@ -4,6 +4,7 @@ parameters:
       user:
         sslepicka:
           enabled: true
+          name: sslepicka
           sudo: false
           full_name: Stanislav Slepicka
           home: /home/sslepicka
