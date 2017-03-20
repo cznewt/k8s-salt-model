@@ -1,0 +1,53 @@
+# Address plan covered at:
+# https://docs.google.com/spreadsheets/d/17jhct4awbaoXVKp7_SdCbS-DBlikB6oEMb3gzLI4By8/edit#gid=0
+classes:
+- system.linux.system.single
+- system.openssh.server.team.tcpcloud
+- system.openssh.server.team.mcp_qa
+- system.openssh.server.team.lab
+- cluster.emdb_kube.infra
+- cluster.emdb_kube.kubernetes
+parameters: 
+  _param:
+    cluster_domain: emdb-kube.local
+    reclass_data_revision: master
+    cluster_name: emdb_kube
+
+    # cert parameters
+    salt_minion_ca_host: ${_param:infra_config_hostname}.${_param:cluster_domain}
+    salt_minion_ca_authority: salt_master_ca
+
+    # infra service addresses
+    infra_config_address: 192.168.150.51
+    infra_config_hostname: cfg01
+
+    # node hostnames
+    kubernetes_control_node01_hostname: cfg01
+    kubernetes_control_node02_hostname: cfg02
+    kubernetes_control_node03_hostname: cfg03
+    kubernetes_compute_node01_hostname: cmp01
+    kubernetes_compute_node02_hostname: cmp02
+    kubernetes_control_hostname: cfg
+
+    # kubernetes service addresses
+    kubernetes_control_address: 192.168.150.50
+    kubernetes_control_node01_address: 192.168.150.51
+    kubernetes_control_node02_address: 192.168.150.52
+    kubernetes_control_node03_address: 192.168.150.53
+
+    # kubernetes compute
+    kubernetes_compute_node01_single_address: 192.168.150.54
+    kubernetes_compute_node02_single_address: 192.168.150.55
+
+    ##FIXME if ntp defined
+    #ntp_strata_host1: 
+    #ntp_strata_host2: 
+  linux:
+    network:
+      interface:
+        ens4:
+          enabled: true
+          type: eth
+          proto: static
+          address: ${_param:single_address}
+          netmask: 255.255.255.0

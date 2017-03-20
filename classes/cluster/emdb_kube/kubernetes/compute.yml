@@ -4,7 +4,7 @@ classes:
 - system.salt.minion.cert.k8s_client
 - system.salt.minion.cert.etcd_client
 #- system.bird.server.single
-- cluster.k8s-salt-model
+- cluster.emdb_kube
 parameters:
   kubernetes:
     pool:

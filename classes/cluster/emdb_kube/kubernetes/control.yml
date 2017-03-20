@@ -5,8 +5,8 @@ classes:
 - system.linux.system.repo.docker
 - system.salt.minion.cert.etcd_server
 - system.kubernetes.master.cluster
-- cluster.k8s-salt-model.kubernetes.compute
-- cluster.k8s-salt-model
+- cluster.emdb_kube.kubernetes.compute
+- cluster.emdb_kube
 parameters:
   _param:
     keepalived_vip_interface: ens4
