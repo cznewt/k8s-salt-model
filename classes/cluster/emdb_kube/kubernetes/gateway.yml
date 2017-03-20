@@ -1,2 +1,5 @@
 classes:
 - cluster.emdb_kube
+parameters:
+  _param:
+    single_address: 127.0.1.1
